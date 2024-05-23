@@ -36,7 +36,7 @@ spec:
   resources:
     requests:
       memory: 400Mi
-  retention: 30d
+  retention: 14d
   ruleNamespaceSelector: {}
   ruleSelector: {}
   scrapeConfigNamespaceSelector: {}
@@ -57,6 +57,6 @@ spec:
         - ReadWriteOnce
         resources:
           requests:
-            storage: 100Gi
-        storageClassName: ssd
+            storage: 40Gi
+        storageClassName: gp2
   version: 2.52.0
