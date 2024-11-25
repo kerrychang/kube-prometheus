@@ -36,6 +36,8 @@ spec:
   resources:
     requests:
       memory: 400Mi
+  retention: 30d
+  retentionSize: 30GB
   ruleNamespaceSelector: {}
   ruleSelector: {}
   scrapeConfigNamespaceSelector: {}
@@ -48,3 +50,15 @@ spec:
   serviceMonitorNamespaceSelector: {}
   serviceMonitorSelector: {}
   version: 3.0.0
+  storage:
+    volumeClaimTemplate:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: 40Gi
+        storageClassName: gp2
+  version: 2.52.0
