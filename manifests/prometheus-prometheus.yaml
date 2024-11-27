@@ -61,4 +61,3 @@ spec:
           requests:
             storage: 40Gi
         storageClassName: gp2
-  version: 2.52.0
